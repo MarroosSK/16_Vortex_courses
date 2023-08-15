@@ -1,0 +1,129 @@
+.subscribe{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 40px 0;
+}
+
+.subscribe__float{
+    width: 65%;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.subscribe__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(192, 176, 218, 0.9);
+    padding: 45px;
+    border-radius: 10px;
+}
+
+.subscribe__left, .subscribe__right{
+    width: 50%;
+}
+
+.subscribe__left h2{
+    font-size: 1.4rem;
+    line-height: 50px;
+}
+
+.subscribe__left p{
+    margin-left: 15px;
+    margin-top: 5px;
+    color: #161C29;
+}
+
+.subscribe__right{
+    padding: 0.4rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+}
+.subscribe__right input{
+    padding: 0.7rem 1.5rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1200px) {
+    .subscribe__right input{
+        width: 70%;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    .subscribe__left, .subscribe__right{
+        width: 100%;
+    }
+    .subscribe__float{
+        width: 85%;
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .subscribe__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        column-gap: 2rem;
+    }
+    .subscribe__right{
+        margin-top: 30px;
+    }
+
+    .subscribe__right input{  
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 500px) {
+
+    .subscribe{
+        margin-top: 40px;
+    }
+
+    .subscribe__float{
+        width: 95%;
+    }
+    .subscribe__left h2{
+        font-size: 1rem;
+        line-height: 40px;
+    }
+    
+    .subscribe__left p{
+        margin-left: 0;
+        margin-top: 5px;
+        color: #161C29;
+    }
+
+    .subscribe__right{
+        padding: 0.2rem;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+    }
+    .subscribe__right input{
+        padding: 0.4rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+
+
+}

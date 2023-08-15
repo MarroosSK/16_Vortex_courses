@@ -1,0 +1,110 @@
+.questions{
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+}
+
+.questions__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.questions__left, .questions__right{
+    width: 50%;
+}
+
+.questions__left h2{
+    font-size: 2.7rem;
+    line-height: 50px;
+    text-align: center;
+}
+.questions__left p{
+    margin-top: 40px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.questions__right{
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap; /* Umožní položkám ísť na ďalší riadok */
+  gap: 20px; 
+}
+/* ACCORDION */
+
+.accordion {
+  width: calc(50% - 10px);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  
+
+  
+  .itemBtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: left;
+    color: rgba(124, 58, 237, .9);
+    background-color: transparent;
+    border: none;
+  }
+  
+  .itemBtn:hover {
+    background-color: rgba(192, 176, 218, 0.9);
+  }
+  
+  .itemBtnExpanded {
+    background-color: #e7e7e7;
+  }
+  
+  .itemContent {
+    transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+  }
+  
+  .itemPanel {
+    padding: 1rem;
+  }
+  
+  .chevron {
+    margin-left: auto;
+    transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+
+  }
+
+  .itemBtnExpanded .chevron {
+    transform: rotate(180deg);
+
+  }
+
+  /* RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+  .questions__right{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px; 
+  }
+
+}
+
+@media only screen and (max-width: 620px) {
+  .questions__right{
+    flex-direction: column;
+    
+  }
+  .accordion{
+    width: 100%;
+  }
+
+}

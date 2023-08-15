@@ -1,0 +1,80 @@
+.about{
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    background-color: rgba(124, 58, 237, .9);
+}
+
+.about__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.about__icon{
+    width: 80px;
+    height: 80px;
+    background-color: rgba(174, 132, 246, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden; /* Skryje prípadný prebytok obsahu cez rámik kruhu */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.about__icon img{
+    width: 45px;
+    height: 45px;
+}
+
+.about__text {
+    width: 50%;
+}
+
+.about__text h5 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about__text p {
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1140px) {
+    .item__wrapper {
+        column-gap: 1rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .item__wrapper {
+        flex-direction: column;
+        row-gap: 1rem
+    }
+}
+@media only screen and (max-width: 630px) {
+    .about__wrapper{
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    .about__text {
+        width: 75%;
+    }
+    .about__text h5, .about__text p {
+        text-align: center;
+    }
+
+}

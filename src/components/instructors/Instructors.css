@@ -1,0 +1,151 @@
+.instructors{
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+}
+
+.instructors__wrapper-top h2{
+    font-size: 2.7rem;
+    line-height: 50px;
+}
+.instructors__wrapper-top p{
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+.instructors__wrapper-bottom{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.instructorItem__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 200px;
+}
+
+.insturctorItem__wrapper-img{
+    position: relative;
+    width: 260px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: rgba(174, 132, 246, 0.9);
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+}
+.insturctorItem__wrapper-img:hover{
+    background-color: #fff;
+}
+
+.insturctorItem__wrapper-img img{
+    height: 220px;
+    width: 260px;
+    object-fit: contain;
+}
+
+.insturctorItem__wrapper-text{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.4rem;
+}
+
+.insturctorItem__wrapper-text h5{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.insturctorItem__wrapper-text p{
+    font-size: 0.8rem;
+    color: rgb(174, 132, 246);
+}
+
+.instructor__btn{
+    margin-top: 40px;
+    text-align: center;
+    column-gap: 1.5rem;
+}
+
+.insturctorItem__wrapper-img-social {
+    display: none; /* Skryté pôvodne */
+    position: absolute; /* Pridané, aby sa zobrazovalo nad obrazom */
+    column-gap: 0.4rem;
+    bottom: 15px; /* Pridané, aby boli ikony odspodu */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Pridané, aby bol nad obrázkom */
+}
+
+.insturctorItem__wrapper-img-social li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(124, 58, 237, .9);
+}
+.insturctorItem__wrapper-img-social li svg{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.insturctorItem__wrapper-img-social li svg:hover{
+    width: 30px;
+    height: 30px;
+    color: #161C29;
+    cursor: pointer;
+}
+
+.insturctorItem__wrapper-img:hover .insturctorItem__wrapper-img-social {
+    display: flex; /* Zobrazí sa len po hoveri nad .instructorItem__wrapper */
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 992px) {
+    .instructors__wrapper-top{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .instructors__wrapper-top h2{
+        text-align: center;
+    }
+    .instructors__wrapper-top p{
+        text-align: center;
+    }
+
+}
+@media only screen and (max-width: 850px) {
+    .instructors__wrapper-bottom{
+        margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .instructorItem__wrapper{
+        width: 50%;
+        height: 300px;
+    }
+
+}
+@media only screen and (max-width: 570px) {
+    .instructors__wrapper-bottom{
+        flex-direction: column;
+        
+    }
+    .instructorItem__wrapper{
+        width: 100%;
+        height: 300px;
+    }
+
+}
