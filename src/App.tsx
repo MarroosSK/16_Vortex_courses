@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { useScrollTop } from "./hooks/useScrollTop";
-import Home from "./pages/home/Home";
+import Loading from "./pages/loading/Loading";
 
 function App() {
   const { isScrolled } = useScrollTop();
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div style={{ position: "relative" }}>
-      <Home />
+      <Loading />
       <button
         id="scrollToTopButton"
         className={isVisible ? "active" : ""}

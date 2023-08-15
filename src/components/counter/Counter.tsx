@@ -1,8 +1,39 @@
+import { useEffect } from "react";
 import "./Counter.css";
 import CountUp from "react-countup";
 import people from "../../assets/people2.jpg";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const leftVariants = {
+  visible: {
+    x: "0%",
+    opacity: 1,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+  hidden: { x: "-100%", opacity: 0 },
+};
+
+const rightVariants = {
+  visible: {
+    x: "0%",
+    opacity: 1,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+  hidden: { x: "+100%", opacity: 0 },
+};
 
 const Counter = () => {
+  const controls = useAnimation();
+
+  const [leftRef, leftInView] = useInView();
+
+  useEffect(() => {
+    if (leftInView) {
+      controls.start("visible");
+    }
+  }, [controls, leftInView]);
+
   const counterData = [
     {
       title: "YEARS",
@@ -33,10 +64,22 @@ const Counter = () => {
     <section className="counter">
       <div className="container">
         <div className="counter__wrapper">
-          <div className="left__side">
+          <motion.div
+            className="left__side"
+            ref={leftRef}
+            animate={controls}
+            initial="hidden"
+            variants={leftVariants}
+          >
             <img src={people} alt="people-study" />
-          </div>
-          <div className="right__side">
+          </motion.div>
+          <motion.div
+            className="right__side"
+            ref={leftRef}
+            animate={controls}
+            initial="hidden"
+            variants={rightVariants}
+          >
             <h2>Growing Vortex</h2>
             <h2 className="highlight">Community</h2>
             <p>
@@ -48,9 +91,10 @@ const Counter = () => {
               {counterData.map((item, index) => (
                 <div className="counteritem__wrapper" key={index}>
                   <CountUp
+                    enableScrollSpy={true}
                     start={0}
                     end={item.value}
-                    delay={0}
+                    delay={1}
                     prefix={item.prefixValue}
                     suffix={item.suffixValue}
                     className="number"
@@ -59,7 +103,7 @@ const Counter = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

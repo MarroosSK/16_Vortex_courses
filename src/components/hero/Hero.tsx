@@ -2,7 +2,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section className="">
+    <section id="home">
       <div className="container">
         <div className="hero__wrapper">
           <h2>Let the Vortex pull you in</h2>

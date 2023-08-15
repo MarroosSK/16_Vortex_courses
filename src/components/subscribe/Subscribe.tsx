@@ -2,7 +2,7 @@ import "./Subscribe.css";
 
 const Subscribe = () => {
   return (
-    <section className="subscribe">
+    <section id="subscribtion" className="subscribe">
       <div className="container">
         <div className="subscribe__float">
           <div className="subscribe__wrapper">

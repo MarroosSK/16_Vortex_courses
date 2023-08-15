@@ -33,7 +33,7 @@ const Categories = () => {
   ];
 
   return (
-    <section className="category">
+    <section id="categories" className="category">
       <div className="container">
         <div className="category__wrapper">
           <div className="top__heading">

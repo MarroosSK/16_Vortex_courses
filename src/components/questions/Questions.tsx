@@ -51,7 +51,7 @@ const Questions = () => {
     },
   ];
   return (
-    <section className="questions">
+    <section id="qa" className="questions">
       <div className="container">
         <div className="questions__wrapper">
           <div className="questions__left">

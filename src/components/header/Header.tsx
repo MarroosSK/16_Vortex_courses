@@ -46,12 +46,11 @@ const Header = () => {
           >
             <NavItem title="Home" linkTo="#home" />
             <div className="dropdown-wrapper">
-              <div
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="dropdown-wrapper-courses"
-              >
-                <NavItem title="Courses" linkTo="#category" />
-                <RiArrowDropDownLine />
+              <div className="dropdown-wrapper-courses">
+                <NavItem title="Courses" linkTo="#categories" />
+                <RiArrowDropDownLine
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                />
               </div>
               {dropdownOpen && (
                 <div className="dropdown-menu">
@@ -62,7 +61,7 @@ const Header = () => {
               )}
             </div>
             <NavItem title="Q&A" linkTo="#qa" />
-            <NavItem title="Subscribe" linkTo="#subscribe" />
+            <NavItem title="Subscribe" linkTo="#subscribtion" />
           </ul>
 
           {/* mobile menu */}
