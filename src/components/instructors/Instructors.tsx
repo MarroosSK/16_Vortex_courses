@@ -1,5 +1,6 @@
 import { instructorsData } from "../../utils/dummyData";
 import "./Instructors.css";
+import { Link } from "react-router-dom";
 
 const Instructors = () => {
   return (
@@ -35,7 +36,9 @@ const Instructors = () => {
           </div>
         </div>
         <div className="instructor__btn">
-          <button className="primary__btn">see more &#8594;</button>
+          <Link to="/instructors">
+            <button className="primary__btn">see more &#8594;</button>
+          </Link>
         </div>
       </div>
     </section>

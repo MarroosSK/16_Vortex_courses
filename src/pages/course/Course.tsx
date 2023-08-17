@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Course.css";
-import { categoryData, coursesData } from "../../utils/dummyData";
+import { categoryOnlyData, coursesData } from "../../utils/dummyData";
 
 const Course = () => {
   const [word, setWord] = useState("");
@@ -36,7 +36,7 @@ const Course = () => {
           <div className="course__left-category">
             <h2>Categories</h2>
             <ul className="course__left-category-list">
-              {categoryData.map((cat, index) => (
+              {categoryOnlyData.map((cat, index) => (
                 <li
                   key={index}
                   onClick={() => handleCategoryClick(cat.title)}

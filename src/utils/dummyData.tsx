@@ -73,15 +73,32 @@ export const categoryData = [
     color: "rgba(139, 85, 233, 0.9)",
   },
 ];
+export const categoryOnlyData = [
+  {
+    title: "All",
+  },
+  {
+    title: "Business",
+  },
+  {
+    title: "Design",
+  },
+  {
+    title: "Photography",
+  },
+  {
+    title: "Web Dev",
+  },
+];
 export const coursesData = [
   {
     title: "The Ultimate Ethical Hacking",
     category: "business",
-    desc: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
-    certification: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    desc: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    certification: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
     image: img1,
-    price: "FREE",
-    startingDate: "16.Sep",
+    price: "12.99",
+    startingDate: "17.Sep",
     learningOutcomes: [
       "Over 37 lectures and 55.5 hours of content!",
       "LIVE PROJECT End to End Software Testing Training Included.",
@@ -96,11 +113,11 @@ export const coursesData = [
   {
     title: "Master Web Design",
     category: "design",
-    desc: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
-    certification: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    desc: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    certification: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
     image: img2,
-    price: "FREE",
-    startingDate: "16.Sep",
+    price: "44.60",
+    startingDate: "09.Oct",
     learningOutcomes: [
       "Over 37 lectures and 55.5 hours of content!",
       "LIVE PROJECT End to End Software Testing Training Included.",
@@ -115,11 +132,11 @@ export const coursesData = [
   {
     title: "Edit Photos in Photoshop",
     category: "design",
-    desc: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
-    certification: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    desc: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    certification: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
     image: img3,
-    price: "FREE",
-    startingDate: "16.Sep",
+    price: "59.99",
+    startingDate: "22.Dec",
     learningOutcomes: [
       "Over 37 lectures and 55.5 hours of content!",
       "LIVE PROJECT End to End Software Testing Training Included.",
@@ -134,8 +151,8 @@ export const coursesData = [
   {
     title: "React for Beginners",
     category: "web dev",
-    desc: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
-    certification: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    desc: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    certification: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
     image: img4,
     price: "FREE",
     startingDate: "16.Sep",
@@ -153,11 +170,11 @@ export const coursesData = [
   {
     title: "The Ultimate Business class",
     category: "photography",
-    desc: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
-    certification: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    desc: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    certification: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
     image: img5,
-    price: "FREE",
-    startingDate: "16.Sep",
+    price: "11.99",
+    startingDate: "30.Sep",
     learningOutcomes: [
       "Over 37 lectures and 55.5 hours of content!",
       "LIVE PROJECT End to End Software Testing Training Included.",
@@ -172,11 +189,11 @@ export const coursesData = [
   {
     title: "Advanced React",
     category: "business",
-    desc: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
-    certification: `If you are a newbie to managing a WordPress website, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge when owning a WordPress page: how to find your site the best WordPress Hosting service. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    desc: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
+    certification: `If you are a newbie in Learning, then congratulations! You are here at the right track with us because we are going to introduce you one of the most basic knowledge: how to find your course on Vortex. This process is often overlooked by most of the website owners. But it can be considered the most important key point to bring your site to stand out of the crowd. A great hosting service could help you to improve SEO and increase sales as well.`,
     image: img6,
-    price: "FREE",
-    startingDate: "16.Sep",
+    price: "25.55",
+    startingDate: "01.Nov",
     learningOutcomes: [
       "Over 37 lectures and 55.5 hours of content!",
       "LIVE PROJECT End to End Software Testing Training Included.",

@@ -1,5 +1,6 @@
 import { coursesData } from "../../utils/dummyData";
 import "./Courses.css";
+import { Link } from "react-router-dom";
 
 const Courses = () => {
   return (
@@ -34,7 +35,9 @@ const Courses = () => {
           </div>
         </div>
         <div className="courses__btn">
-          <button className="primary__btn">see more &#8594;</button>
+          <Link to="/courses">
+            <button className="primary__btn">see more &#8594;</button>
+          </Link>
         </div>
       </div>
     </section>

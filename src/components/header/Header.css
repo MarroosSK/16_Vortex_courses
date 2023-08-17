@@ -1,3 +1,6 @@
+.activeLink{
+  color: rgba(124, 58, 237, .9) !important;
+}
 
 .nav__wrapper{
     display: flex;

@@ -229,7 +229,11 @@
 
 
     .course__left-category{
+        background-color: rgba(192, 176, 218, 0.9);
+        border-radius: 10px;
+        padding: 15px;
         position: static;
+        height: auto;
 
      }
 
