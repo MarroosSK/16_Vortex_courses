@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import "./Loading.css";
-import Home from "../home/Home";
 import nftIcon from "../../assets/cyclone.png";
 
 const Loading = () => {
@@ -10,17 +9,20 @@ const Loading = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+      window.location.reload();
+    }, 1500);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isLoading]);
 
-  return isLoading ? (
+  return (
     <div className="loading rotate-center">
-      <img src={nftIcon} alt="" />
+      <div className="rotate-center">
+        <img src={nftIcon} alt="" />
+      </div>
     </div>
-  ) : (
-    <Home />
   );
 };
 

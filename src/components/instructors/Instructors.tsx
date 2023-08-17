@@ -1,44 +1,7 @@
+import { instructorsData } from "../../utils/dummyData";
 import "./Instructors.css";
-import teacher1 from "../../assets/teacher1C.png";
-import teacher2 from "../../assets/teacher2C.png";
-import teacher3 from "../../assets/teacher3C.png";
-//icons
-import { FiFacebook, FiInstagram } from "react-icons/fi";
-import { PiLinkedinLogo } from "react-icons/pi";
 
 const Instructors = () => {
-  const instructorsData = [
-    {
-      name: "Rust Cohle",
-      photo: teacher1,
-      area: "Business",
-      social: {
-        fb: <FiFacebook />,
-        insta: <FiInstagram />,
-        linked: <PiLinkedinLogo />,
-      },
-    },
-    {
-      name: "Carmen Berzatto",
-      photo: teacher3,
-      area: "Design & Photo",
-      social: {
-        fb: <FiFacebook />,
-        insta: <FiInstagram />,
-        linked: <PiLinkedinLogo />,
-      },
-    },
-    {
-      name: "Samantha Carter",
-      photo: teacher2,
-      area: "Web Dev",
-      social: {
-        fb: <FiFacebook />,
-        insta: <FiInstagram />,
-        linked: <PiLinkedinLogo />,
-      },
-    },
-  ];
   return (
     <section className="instructors">
       <div className="container">

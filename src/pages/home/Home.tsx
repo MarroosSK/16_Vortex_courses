@@ -3,8 +3,6 @@ import {
   Categories,
   Counter,
   Courses,
-  Footer,
-  Header,
   Hero,
   Instructors,
   Partners,
@@ -18,7 +16,6 @@ import "./Home.css";
 const Home = () => {
   return (
     <main>
-      <Header />
       <Hero />
       <About />
       <Counter />
@@ -30,7 +27,6 @@ const Home = () => {
       <Plans />
       <Questions />
       <Subscribe />
-      <Footer />
     </main>
   );
 };

@@ -1,22 +1,23 @@
-.partners{
+.partners {
   width: 100%;
   height: auto;
   padding: 40px 0;
 }
 
-.partners__wrapper h2{
+.partners__wrapper h2 {
   text-align: center;
   font-size: 2.7rem;
   line-height: 50px;
+  margin-bottom: 30px;
 }
 
 
 .partner__wrapper {
   margin-top: 30px;
-    padding: 0 100px; 
-  }
-  
-  img {
-    height: 70px; 
-    cursor: pointer;
-  }
+  padding: 0 100px;
+}
+
+img {
+  height: 70px;
+  cursor: pointer;
+}

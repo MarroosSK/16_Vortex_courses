@@ -1,38 +1,8 @@
+import { plansData } from "../../utils/dummyData";
 import "./Plans.css";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 
 const Plans = () => {
-  const plansData = [
-    {
-      title: "STARTER",
-      price: "FREE",
-      benefnts: ["Limited Access", "Source Files", "Enhanced Security"],
-      taunt: "Try",
-    },
-    {
-      title: "JUNIOR",
-      price: "€39/mo",
-      benefnts: [
-        "Limited Access",
-        "Source Files",
-        "Free Appointments",
-        "Enhanced Security",
-      ],
-      taunt: "Buy",
-    },
-    {
-      title: "PRO",
-      price: "€59/mo",
-      benefnts: [
-        "Full Access",
-        "Source Files",
-        "Free Appointments",
-        "Enhanced Security",
-        "Gift",
-      ],
-      taunt: "Buy",
-    },
-  ];
   return (
     <section className="plans">
       <div className="container">
@@ -48,15 +18,15 @@ const Plans = () => {
                 <h5>{item.title}</h5>
                 <p>{item.price}</p>
                 <ul className="plansItem__list">
-                  {item.benefnts.map((benefit) => (
-                    <li>
+                  {item.benefnts.map((benefit, index2) => (
+                    <li key={index2}>
                       <AiOutlineCheckCircle /> {benefit}
                     </li>
                   ))}
+                  <div className="plans__btn">
+                    <button className="primary__btn">{item.taunt}</button>
+                  </div>
                 </ul>
-                <div className="plans__btn">
-                  <button className="primary__btn">{item.taunt}</button>
-                </div>
               </div>
             ))}
           </div>

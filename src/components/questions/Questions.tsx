@@ -2,6 +2,7 @@ import "./Questions.css";
 //import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion";
 import chevronDown from "./chevron-down.svg";
+import { FAQData } from "../../utils/dummyData";
 
 /**
  * @type {React.ExoticComponent<import('@szhsin/react-accordion').AccordionItemProps>}
@@ -28,28 +29,6 @@ const AccordionItem: React.FC<
 );
 
 const Questions = () => {
-  const FAQData = [
-    {
-      question: "How Vortex work ?",
-      answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-      do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-      question: "What is the main process open account ?",
-      answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-      do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-      question: "How to start Learning?",
-      answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-      do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-    {
-      question: "How to pick up instructor?",
-      answer: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-      do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
-    },
-  ];
   return (
     <section id="qa" className="questions">
       <div className="container">
@@ -65,7 +44,7 @@ const Questions = () => {
           </div>
           <div className="questions__right">
             {FAQData.map((faqItem, index) => (
-              <div className={"accordion"}>
+              <div className={"accordion"} key={index}>
                 <Accordion transition transitionTimeout={250} key={index}>
                   <AccordionItem header={faqItem.question} initialEntered>
                     {faqItem.answer}

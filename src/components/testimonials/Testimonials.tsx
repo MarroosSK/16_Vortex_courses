@@ -1,8 +1,6 @@
+import { customerData } from "../../utils/dummyData";
 import "./Testimonials.css";
 import Slider from "react-slick";
-import customerImg from "../../assets/teacher1C.png";
-import customerImg2 from "../../assets/teacher2C.png";
-import customerImg3 from "../../assets/teacher3C.png";
 
 const Testimonials = () => {
   const settings = {
@@ -16,39 +14,6 @@ const Testimonials = () => {
     swipeToSlide: true,
     arrows: false,
   };
-
-  const customerData = [
-    {
-      img: customerImg,
-      name: "Maros Dlhy",
-      position: "CEO",
-      said: `"Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Numquam laborum omnis earum odio, totam sapiente voluptates
-      cum nesciunt, autem repellat repudiandae culpa error enim
-      aliquid commodi suscipit vero eius. Id rerum molestias neque
-      expedita explicabo laborum harum facere aliquam pariatur?"`,
-    },
-    {
-      img: customerImg2,
-      name: "Lena Kratka",
-      position: "Artist",
-      said: `"Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Numquam laborum omnis earum odio, totam sapiente voluptates
-      cum nesciunt, autem repellat repudiandae culpa error enim
-      aliquid commodi suscipit vero eius. Id rerum molestias neque
-      expedita explicabo laborum harum facere aliquam pariatur?"`,
-    },
-    {
-      img: customerImg3,
-      name: "Milos Forman",
-      position: "Designer",
-      said: `"Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-      Numquam laborum omnis earum odio, totam sapiente voluptates
-      cum nesciunt, autem repellat repudiandae culpa error enim
-      aliquid commodi suscipit vero eius. Id rerum molestias neque
-      expedita explicabo laborum harum facere aliquam pariatur?"`,
-    },
-  ];
 
   return (
     <section className="testimonials">

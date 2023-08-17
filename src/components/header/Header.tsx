@@ -2,7 +2,9 @@ import "./Header.css";
 import nftIcon from "../../assets/cyclone.png";
 import NavItem from "./NavItem";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import profilePic from "../../assets/profilePic.jpg";
 import { useRef, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
@@ -44,10 +46,10 @@ const Header = () => {
               navClicked ? "side__right active" : "side__right"
             }`}
           >
-            <NavItem title="Home" linkTo="#home" />
+            <NavItem title="Home" linkTo="/" />
             <div className="dropdown-wrapper">
               <div className="dropdown-wrapper-courses">
-                <NavItem title="Courses" linkTo="#categories" />
+                <NavItem title="Courses" linkTo="courses" />
                 <RiArrowDropDownLine
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                 />
@@ -60,9 +62,13 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <NavItem title="Q&A" linkTo="#qa" />
-            <NavItem title="Subscribe" linkTo="#subscribtion" />
+            <NavItem title="Instructors" linkTo="/instructors" />
           </ul>
+          <div className="account__box">
+            <Link to="/profile">
+              <img src={profilePic} alt="" />
+            </Link>
+          </div>
 
           {/* mobile menu */}
           <span className="mobile__menu" onClick={handleNavClick}>

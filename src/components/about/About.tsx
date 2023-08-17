@@ -1,29 +1,7 @@
+import { aboutData } from "../../utils/dummyData";
 import "./About.css";
-import learnFast from "../../assets/mortarboard.png";
-import learnExpert from "../../assets/book.png";
-import learnOnline from "../../assets/global-network.png";
 
 const About = () => {
-  const aboutData = [
-    {
-      title: "Learn From Experts",
-      desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Perspiciatis, corporis.`,
-      icon: learnFast,
-    },
-    {
-      title: "Learn Fast",
-      desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Perspiciatis, corporis.`,
-      icon: learnExpert,
-    },
-    {
-      title: "Learn Online",
-      desc: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-      Perspiciatis, corporis.`,
-      icon: learnOnline,
-    },
-  ];
   return (
     <section className="about">
       <div className="container">

@@ -1,43 +1,14 @@
 import "./Footer.css";
 import nftIcon from "../../assets/cyclone.png";
+import {
+  quickLinks,
+  quickLinks2,
+  quickLinks3,
+  socialIcons,
+} from "../../utils/dummyData";
 
 const Footer = () => {
   const year = new Date().getFullYear();
-
-  const quickLinks = [
-    {
-      path: "#",
-      display: "Categories",
-    },
-    {
-      path: "#",
-      display: "Courses",
-    },
-    {
-      path: "#",
-      display: "Plans",
-    },
-  ];
-  const quickLinks2 = [
-    {
-      path: "#",
-      display: "Pricing",
-    },
-    {
-      path: "#",
-      display: "Q&A",
-    },
-  ];
-  const quickLinks3 = [
-    {
-      path: "#",
-      display: "About",
-    },
-    {
-      path: "#",
-      display: "Contact",
-    },
-  ];
 
   return (
     <footer className="footer">
@@ -87,9 +58,16 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <p className="copyright">
-          Copyright {year}, developed by marroos. All rights reserved.{" "}
-        </p>
+        <div className="copyright">
+          <p>Copyright {year}, developed by marroos. All rights reserved. </p>
+          <ul className="copyright__social">
+            {socialIcons.map((item, index) => (
+              <li className="copyright__social-icon" key={index}>
+                {item.icon}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );

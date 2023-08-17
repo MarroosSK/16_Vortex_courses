@@ -1,44 +1,14 @@
+import { categoryData } from "../../utils/dummyData";
 import "./Categories.css";
-import img1 from "../../assets/cat2.png";
-import img2 from "../../assets/cat3.png";
-import img3 from "../../assets/cat1.png";
-import img4 from "../../assets/cat4.png";
 
 const Categories = () => {
-  const categoryData = [
-    {
-      title: "Business",
-      desc: "2 Courses",
-      icon: img1,
-      color: "rgba(124, 58, 237, .9)",
-    },
-    {
-      title: "Design",
-      desc: "3 Courses",
-      icon: img2,
-      color: "rgba(154, 113, 225, 0.9)",
-    },
-    {
-      title: "Photography",
-      desc: "4 Courses",
-      icon: img4,
-      color: "rgba(173, 144, 223, 0.9)",
-    },
-    {
-      title: "Web Dev",
-      desc: "5 Courses",
-      icon: img3,
-      color: "rgba(139, 85, 233, 0.9)",
-    },
-  ];
-
   return (
     <section id="categories" className="category">
       <div className="container">
         <div className="category__wrapper">
           <div className="top__heading">
             <h2>
-              Vortex <span className="highlight">Categories</span>
+              Vortex <span className="highlight">Category</span>
             </h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.

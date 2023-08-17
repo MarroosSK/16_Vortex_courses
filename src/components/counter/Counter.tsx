@@ -4,6 +4,7 @@ import CountUp from "react-countup";
 import people from "../../assets/people2.jpg";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { counterData } from "../../utils/dummyData";
 
 const leftVariants = {
   visible: {
@@ -34,32 +35,6 @@ const Counter = () => {
     }
   }, [controls, leftInView]);
 
-  const counterData = [
-    {
-      title: "YEARS",
-      value: 7,
-      prefixValue: "",
-      suffixValue: "+",
-    },
-    {
-      title: "COUNTRIES",
-      value: 59,
-      prefixValue: "",
-      suffixValue: "",
-    },
-    {
-      title: "INSTRUCTORS",
-      value: 150,
-      prefixValue: "+",
-      suffixValue: "",
-    },
-    {
-      title: "STUDENTS",
-      value: 300,
-      prefixValue: "",
-      suffixValue: "K",
-    },
-  ];
   return (
     <section className="counter">
       <div className="container">
