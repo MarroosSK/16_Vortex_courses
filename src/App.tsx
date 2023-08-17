@@ -37,8 +37,7 @@ const Layout = () => {
 function App() {
   const { isScrolled } = useScrollTop();
   const [isVisible, setIsVisible] = useState(false);
-  const { currentUser, isFirstLogin, setIsFirstLogin } =
-    useContext(AuthContext);
+  const { currentUser, isFirstLogin } = useContext(AuthContext);
 
   //login
   //overenie, ci je user prihlaseny
