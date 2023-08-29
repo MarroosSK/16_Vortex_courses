@@ -29,6 +29,7 @@ const MiniSidebar = () => {
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? "activeLink" : "")}
+            onClick={handleMenuToggle}
           >
             Home
           </NavLink>
@@ -37,6 +38,7 @@ const MiniSidebar = () => {
           <NavLink
             to="/courses"
             className={({ isActive }) => (isActive ? "activeLink" : "")}
+            onClick={handleMenuToggle}
           >
             Courses
           </NavLink>
@@ -45,12 +47,13 @@ const MiniSidebar = () => {
           <NavLink
             to="/instructors"
             className={({ isActive }) => (isActive ? "activeLink" : "")}
+            onClick={handleMenuToggle}
           >
             Instructors
           </NavLink>
         </li>
       </ul>
-      {miniMenu && <div className="overlay" onClick={handleMenuToggle}></div>}
+      {miniMenu && <div onClick={handleMenuToggle}></div>}
     </div>
   );
 };
