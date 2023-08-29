@@ -1,0 +1,43 @@
+.header__mini{
+    overflow-y: scroll;
+}
+
+.header__mini ul{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 55%;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color: rgb(192, 176, 218);
+    z-index: 750;
+    height: 100vh;
+    padding-top: 60px;
+    padding-left: 35px;
+    display: none;
+}
+
+.header__mini ul li{
+    list-style: none;
+    color: #fff;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 98;
+  }
+
+@media only screen and (max-width: 780px) {
+    .overlay{
+        display: block;
+    }
+    .header__mini ul{
+        display: flex;
+    }
+   }

@@ -1,28 +1,27 @@
+import { useContext, useRef, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { TiThMenuOutline } from "react-icons/ti";
+import { FaWindowClose } from "react-icons/fa";
 import "./Header.css";
+import MiniSidebar from "./MiniSidebar";
 import nftIcon from "../../assets/cyclone.png";
-import NavItem from "./NavItem";
-import { RiArrowDropDownLine } from "react-icons/ri";
 import profilePic from "../../assets/profilePic.jpg";
-import { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { MiniMenuContext } from "../../context/MiniMenuContext";
 
 const Header = () => {
   const headerRef = useRef<HTMLElement>(null);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [navClicked, setNavClicked] = useState(false);
 
-  const handleNavClick = () => {
-    setNavClicked(!navClicked);
-  };
+  const { miniMenu, handleMenuToggle } = useContext(MiniMenuContext);
 
+  //new class in header
   const headerFunc = () => {
     if (
       document.body.scrollTop > 80 ||
       document.documentElement.scrollTop > 80
     ) {
-      headerRef.current?.classList.add("header__shrink");
+      headerRef.current?.classList.add("sticky__header");
     } else {
-      headerRef.current?.classList.remove("header__shrink");
+      headerRef.current?.classList.remove("sticky__header");
     }
   };
 
@@ -33,52 +32,56 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="nav" ref={headerRef}>
+    <header className="header" ref={headerRef}>
       <div className="container">
-        <div className="nav__wrapper">
-          <div className="side__left">
+        <div className="header__wrapper">
+          <div className="header__left">
             <img src={nftIcon} className="logo" />
             <h2>Vortex</h2>
           </div>
-
-          <ul
-            className={`side__right ${
-              navClicked ? "side__right active" : "side__right"
-            }`}
-          >
-            <NavItem title="Home" linkTo="/" />
-            <div className="dropdown-wrapper">
-              <div className="dropdown-wrapper-courses">
-                <NavItem title="Courses" linkTo="courses" />
-                <RiArrowDropDownLine
-                  onClick={() => setDropdownOpen(!dropdownOpen)}
-                />
-              </div>
-              {dropdownOpen && (
-                <div className="dropdown-menu">
-                  <a href="#category">Business</a>
-                  <a href="#category">Design</a>
-                  <a href="#category">Web Dev</a>
-                </div>
-              )}
-            </div>
-            <NavItem title="Instructors" linkTo="/instructors" />
+          {/* mini menu */}
+          <div className="miniMenu" onClick={handleMenuToggle}>
+            {miniMenu ? <FaWindowClose /> : <TiThMenuOutline />}
+          </div>
+          <ul className="header__right">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) => (isActive ? "activeLink" : "")}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/courses"
+                className={({ isActive }) => (isActive ? "activeLink" : "")}
+              >
+                Courses
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/instructors"
+                className={({ isActive }) => (isActive ? "activeLink" : "")}
+              >
+                Instructors
+              </NavLink>
+            </li>
           </ul>
           <div className="account__box">
-            <Link to="/profile">
+            <NavLink
+              to="/profile"
+              className={({ isActive }) => (isActive ? "activeLink" : "")}
+            >
               <img src={profilePic} alt="" />
-            </Link>
+            </NavLink>
           </div>
-
-          {/* mobile menu */}
-          <span className="mobile__menu" onClick={handleNavClick}>
-            <i
-              className={navClicked ? "ri-close-circle-line" : "ri-menu-line"}
-            ></i>
-          </span>
         </div>
       </div>
-    </nav>
+      {/* mini menu */}
+      {miniMenu ? <MiniSidebar /> : ""}
+    </header>
   );
 };
 

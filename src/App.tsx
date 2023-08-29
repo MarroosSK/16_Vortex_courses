@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext, useLayoutEffect } from "react";
 import "./App.css";
 import { useScrollTop } from "./hooks/useScrollTop";
 //router
@@ -7,6 +7,7 @@ import {
   Navigate,
   RouterProvider,
   Outlet,
+  useLocation,
 } from "react-router-dom";
 import { Footer, Header } from "./components";
 import {
@@ -25,18 +26,45 @@ export interface ProtectedRouteProps {
 }
 
 const Layout = () => {
+  const { isScrolled } = useScrollTop();
+  const [isVisible, setIsVisible] = useState(false);
+
+  //scroll
+  const handleTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  //scrollUp
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    window.scroll({ top: 0, behavior: "auto" });
+  }, [pathname]);
+
+  useEffect(() => {
+    if (isScrolled) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  }, [isScrolled]);
+
   return (
     <>
       <Header />
       <Outlet />
       <Footer />
+      <button
+        id="scrollToTopButton"
+        className={isVisible ? "active" : ""}
+        onClick={handleTop}
+      >
+        &#8593;
+      </button>
     </>
   );
 };
 
 function App() {
-  const { isScrolled } = useScrollTop();
-  const [isVisible, setIsVisible] = useState(false);
   const { currentUser, isFirstLogin } = useContext(AuthContext);
 
   //login
@@ -87,29 +115,9 @@ function App() {
     },
   ]);
 
-  //scroll
-  const handleTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    if (isScrolled) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  }, [isScrolled]);
-
   return (
     <div style={{ position: "relative" }}>
       <RouterProvider router={router} />
-      <button
-        id="scrollToTopButton"
-        className={isVisible ? "active" : ""}
-        onClick={handleTop}
-      >
-        &#8593;
-      </button>
     </div>
   );
 }
