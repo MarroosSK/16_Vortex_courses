@@ -1,6 +1,6 @@
 # Vortex Courses
 
-This is my Portfolio page.
+Vortex courses made with typescript. Purpose of this app is to allow users to enroll course they want.
 
 
 ## Screenshots
